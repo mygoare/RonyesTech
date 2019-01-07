@@ -35,7 +35,7 @@ const common = {
     watchContentBase: true,
   },
   watchOptions: {
-    ignored: /node_modules/,
+    ignored: ['node_modules/**', 'bower_components/**'],
     poll: 1000,
   },
 
