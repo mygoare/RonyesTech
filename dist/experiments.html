@@ -116,8 +116,8 @@
 
       <div class="container">
         <div class="columns">
-          <div class="column is-3-desktop is-hidden-touch">
-            <a href="#" class="button m-b-md m-t-md is-hidden-desktop">
+          <div class="column is-3-desktop is-hidden-touch experiments-menu-filter-aside" id="experimentsMenuFilterAside">
+            <a href="#" class="button m-b-md m-t-md is-hidden-desktop experiments-menu-filter-trigger" data-target="experimentsMenuFilterAside">
               <span class="icon">
                 <i class="fas fa-chevron-left"></i>
               </span>
@@ -125,36 +125,36 @@
             </a>
 
             <aside class="menu">
-              <p class="menu-label">
+              <a class="menu-label" data-target="byAgeMenuList">
                 <span class="icon">
-                  <i class="fas fa-arrow-down"></i>
+                  <i class="fas fa-chevron-down"></i>
                 </span>
-                <span>Ay Age</span>
-              </p>
-              <ul class="menu-list">
+                <span>By Age</span>
+              </a>
+              <ul class="menu-list" id="byAgeMenuList">
                 <li><a>Preschool</a></li>
                 <li><a>5-7</a></li>
                 <li><a>8-11</a></li>
                 <li><a>12+</a></li>
               </ul>
-              <p class="menu-label">
+              <a class="menu-label" data-target="experimentsMenuList">
                 <span class="icon">
-                  <i class="fas fa-arrow-down"></i>
+                  <i class="fas fa-chevron-down"></i>
                 </span>
                 <span>Experiments</span>
-              </p>
-              <ul class="menu-list">
-                <li><a class="is-active">Chemistry</a></li>
+              </a>
+              <ul class="menu-list" id="experimentsMenuList">
+                <li><a>Chemistry</a></li>
                 <li><a>Biology</a></li>
                 <li><a>Physics</a></li>
               </ul>
-              <p class="menu-label">
+              <a class="menu-label" data-target="topicMenuList">
                 <span class="icon">
-                  <i class="fas fa-arrow-down"></i>
+                  <i class="fas fa-chevron-down"></i>
                 </span>
                 <span>Topic</span>
-              </p>
-              <ul class="menu-list">
+              </a>
+              <ul class="menu-list" id="topicMenuList">
                 <li>
                   <a>Holidays</a>
                   <ul>
@@ -174,7 +174,7 @@
           <div class="column is-9-desktop">
             <div class="columns is-justified-end is-aligned-center is-mobile">
               <div class="column is-narrow is-hidden-desktop">
-                <a href="#" class="button">Filter</a>
+                <a href="#" class="button experiments-menu-filter-trigger" data-target="experimentsMenuFilterAside">Filter</a>
               </div>
               <div class="column is-narrow">
                 <div class="select">
@@ -184,29 +184,6 @@
                     <option>Most Commented</option>
                   </select>
               </div>
-                <!--<div class="dropdown">-->
-                  <!--<div class="dropdown-trigger">-->
-                    <!--<button class="button" aria-haspopup="true" aria-controls="dropdown-menu">-->
-                      <!--<span>Sorted By</span>-->
-                      <!--<span class="icon is-small">-->
-                        <!--<i class="fas fa-angle-down" aria-hidden="true"></i>-->
-                      <!--</span>-->
-                    <!--</button>-->
-                  <!--</div>-->
-                  <!--<div class="dropdown-menu" id="dropdown-menu" role="menu">-->
-                    <!--<div class="dropdown-content">-->
-                      <!--<a href="#" class="dropdown-item is-active">-->
-                        <!--Recent-->
-                      <!--</a>-->
-                      <!--<a class="dropdown-item">-->
-                        <!--Most Viewed-->
-                      <!--</a>-->
-                      <!--<a href="#" class="dropdown-item">-->
-                        <!--Most Commented-->
-                      <!--</a>-->
-                    <!--</div>-->
-                  <!--</div>-->
-                <!--</div>-->
               </div>
             </div>
 
