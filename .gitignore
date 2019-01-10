@@ -1,7 +1,11 @@
-dist/
+dist/*
 
 node_modules/
 
 .idea
 
 bower_components/
+
+!dist/about.html
+!dist/details.html
+!dist/experiments.html
