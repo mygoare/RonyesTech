@@ -9,3 +9,5 @@ bower_components/
 !dist/about.html
 !dist/details.html
 !dist/experiments.html
+
+dist.zip
