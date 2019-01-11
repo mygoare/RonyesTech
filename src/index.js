@@ -3,12 +3,13 @@ require('./style.scss');
 
 
 var swiperBanner = new Swiper('.swiper-container-banner', {
+  effect: 'fade',
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
   },
   autoplay: {
-    delay: 2000,
+    delay: 3000,
   },
   loop: true,
 });
@@ -99,6 +100,22 @@ document.addEventListener('DOMContentLoaded', function () {
       })
     })
   }
+
+  // tabs fixed when scroll
+  window.onscroll = function(){
+      var $tabs = document.querySelector('.tabs');
+      var $tabsPlaceholder = document.querySelector('.tabs-placeholder');
+
+      if (window.pageYOffset > document.querySelector('.tabs').parentElement.offsetTop) {
+        $tabs.classList.add('is-fixed');
+
+        $tabsPlaceholder.classList.add('is-visible');
+      } else {
+        $tabs.classList.remove('is-fixed');
+
+        $tabsPlaceholder.classList.remove('is-visible');
+      }
+  };
 
 
   // Functions

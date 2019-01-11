@@ -11,6 +11,7 @@
 body, html { overflow-x:hidden; }
 
 .card2 {
+  overflow: hidden;
   position: relative;
   .card-content {
     position: absolute;
@@ -28,7 +29,6 @@ body, html { overflow-x:hidden; }
     }
 
     .content {
-
     }
   }
 
@@ -37,7 +37,23 @@ body, html { overflow-x:hidden; }
     background-position: center;
     background-repeat: no-repeat;
   }
+
+  &:hover {
+    figure.image{
+      transition: transform .25s ease-out;
+      transform-origin: center;
+      transform: scale(1.1);
+    }
+  }
 }
+.card {
+  .content {
+    @extend .has-text-grey-light;
+    @extend .is-size-6;
+    font-family: $family-sans-serif;
+  }
+}
+
 
 .has-background-image-cover {
   background-size: cover;
@@ -111,19 +127,55 @@ body, html { overflow-x:hidden; }
   border-bottom: 1px solid #e6e6e6;
   color: #373a3c;
   display: block;
-  margin-bottom: 1rem;
+  @extend .p-b-md, .p-t-md;
+
+  .title {
+    @extend .is-size-5, .m-b-sm, .has-text-grey;
+
+    //https://stackoverflow.com/a/11842865/875788
+    padding-top: 130px;
+    margin-top: -130px;
+  }
+}
+
+.tabs {
+  &.is-fixed {
+    position: fixed;
+    top: 76px;
+    z-index: 1;
+    background: white;
+    overflow-x: auto;
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
+}
+.tabs-placeholder {
+  margin-bottom: 1.5rem;
+  height: 38px;
+  display: none;
+
+  &.is-visible {
+    display: block;
+    visibility: hidden;
+  }
 }
 
 //https://gist.github.com/jaicab/8799764
 //video-container
 .video-container {
-  max-height: 28rem;
-  height: 28rem;
+  position: relative;
+  padding-bottom: 56.25%; /*16:9*/
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
 }
-
 .video-container iframe,
 .video-container object,
 .video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
 }
@@ -139,25 +191,6 @@ body, html { overflow-x:hidden; }
     padding: 1rem;
   }
 
-
-  //video-container
-  .video-container {
-    position: relative;
-    padding-bottom: 56.25%; /*16:9*/
-    padding-top: 30px;
-    height: 0;
-    overflow: hidden;
-  }
-
-  .video-container iframe,
-  .video-container object,
-  .video-container embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
 }
 
 

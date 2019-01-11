@@ -117,79 +117,74 @@
 
     <!--video-->
     <div class="container">
-      <div class="columns">
-        <div class="column is-6-desktop is-5-tablet">
-          <div class="columns is-direction-column is-justified-between" style="height: 100%;">
-            <div class="column is-narrow">
-              <span class="is-size-5">Kid-Friendly Bephant's Toothpaste</span>
-            </div>
-            <div class="column content">
-              <p>
-                Content..
-              </p>
-              <p>
-                Description..
-              </p>
-            </div>
-            <div class="column is-narrow">
-              <div class="columns is-justified-between is-mobile is-multiline">
-                <div class="column is-narrow">Age: 6+</div>
-                <div class="column is-narrow">
-                  <span class="icon">
-                    <i class="fas fa-clock"></i>
-                  </span>
-                  10 min
-                </div>
-                <div class="column is-narrow">
-                  <span>Share:</span>
-                  <span class="icon">
-                    <i class="fab fa-twitter"></i>
-                  </span>
-                  <span class="icon">
-                    <i class="fab fa-facebook"></i>
-                  </span>
-                  <span class="icon">
-                    <i class="fab fa-pinterest"></i>
-                  </span>
-                  <span class="icon">
-                    <i class="fab fa-vimeo"></i>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!--vimeo-->
-        <div class="column video-container is-6-desktop is-7-tablet">
-          <iframe src="https://player.vimeo.com/video/114042185" width="100%" height="auto" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-        </div>
-
+      <!--vimeo-->
+      <div class="column video-container">
+        <iframe src="https://player.vimeo.com/video/193641463?color=ffffff&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
       </div>
     </div>
-
     <hr>
 
 
     <!--tabs-->
     <div class="container">
-      <div class="tabs">
+      <div class="tabs container">
         <ul>
-          <li class="is-active"><a href="goal">Goal</a></li>
-          <li><a href="#safety">Safety</a></li>
-          <li><a>Materials List</a></li>
-          <li><a>Instruction</a></li>
-          <li><a>Trouble shooting</a></li>
-          <li><a>Question to Ask</a></li>
-          <li><a>Extensions</a></li>
-          <li><a>Disposal</a></li>
+          <li><a href="#overview">Overview</a></li>
+          <li data-target="goal"><a href="#goal">Goal</a></li>
+          <li data-target="safety"><a href="#safety">Safety</a></li>
           <li><a>Download</a></li>
-          <li><a href="#comments">Comments</a></li>
+          <li data-target="comments"><a href="#comments">Comments</a></li>
         </ul>
+      </div>
+
+      <div class="tabs-placeholder">
+        <ul>
+          <li><a href="#overview">Overview</a></li>
+        </ul>
+      </div>
+
+      <div class="box2">
+        <a name="overview"></a>
+        <p class="title">Overview</p>
+        <div>
+          <p>
+            Structure and content overview - CEPN - Paris 13
+          </p>
+          <p>
+            www.cepn-paris13.fr/epog/?page_id=69
+          </p>
+          <p>
+            Structure and content overview. The course teaching is structured around three main areas of economic policies: The economic policies of knowledge and ...
+          </p>
+        </div>
+        <div class="columns is-justified-between is-mobile is-multiline is-1 is-variable m-t-sm m-b-sm">
+          <div class="column is-narrow">Age: 6+</div>
+          <div class="column is-narrow">
+                  <span class="icon">
+                    <i class="fas fa-clock"></i>
+                  </span>
+            10 min
+          </div>
+          <div class="column is-narrow">
+            <span>Share:</span>
+            <span class="icon">
+                    <i class="fab fa-twitter"></i>
+                  </span>
+            <span class="icon">
+                    <i class="fab fa-facebook"></i>
+                  </span>
+            <span class="icon">
+                    <i class="fab fa-pinterest"></i>
+                  </span>
+            <span class="icon">
+                    <i class="fab fa-vimeo"></i>
+                  </span>
+          </div>
+        </div>
       </div>
       <div class="box2">
         <a name="goal"></a>
-        <p class="is-size-5">Goal</p>
+        <p class="title">Goal</p>
         <p>
           Dec 17, 2018 - A simple sentence has only one clause: The children were laughing. John wanted a new bicycle. All the girls are learning English.
         </p>
@@ -209,7 +204,7 @@
       </div>
       <div class="box2">
         <a name="safety"></a>
-        <p class="is-size-5">safety</p>
+        <p class="title">safety</p>
         <p>
           Mobile devices, in Responsive Web Design, relate to a core value which is the value of CSS width or ("device-width"), in CSS Device Independant Pixels, which depends both of the browser and user zoom settings.
         </p>
@@ -221,9 +216,9 @@
         <br>
         <br>
       </div>
-      <div>
+      <div class="box2">
         <a name="comments"></a>
-        <p class="is-size-5">Comments</p>
+        <p class="title">Comments</p>
 
         <div id="disqus_thread"></div>
         <script>
