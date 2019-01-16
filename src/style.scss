@@ -52,6 +52,17 @@ body, html { overflow-x:hidden; }
     @extend .is-size-6;
     font-family: $family-sans-serif;
   }
+
+  .card-image {
+    overflow: hidden;
+  }
+  &:hover {
+    figure.image{
+      transition: transform .25s ease-out;
+      transform-origin: center;
+      transform: scale(1.1);
+    }
+  }
 }
 
 
