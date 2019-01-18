@@ -71,6 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var $target = document.getElementById(target);
         $el.classList.toggle('is-active');
         $target.classList.toggle('is-active');
+        $target.scrollTop = 0;
       });
     });
   }
@@ -103,18 +104,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // tabs fixed when scroll
   window.onscroll = function(){
-      var $tabs = document.querySelector('.tabs');
+      var $tabs = document.querySelector('.details.tabs');
       var $tabsPlaceholder = document.querySelector('.tabs-placeholder');
 
-      if (window.pageYOffset > document.querySelector('.tabs').parentElement.offsetTop) {
-        $tabs.classList.add('is-fixed');
+      if ($tabs && $tabs.parentElement) {
+        if (window.pageYOffset > $tabs.parentElement.offsetTop) {
+          $tabs.classList.add('is-fixed');
 
-        $tabsPlaceholder.classList.add('is-visible');
-      } else {
-        $tabs.classList.remove('is-fixed');
+          $tabsPlaceholder.classList.add('is-visible');
+        } else {
+          $tabs.classList.remove('is-fixed');
 
-        $tabsPlaceholder.classList.remove('is-visible');
+          $tabsPlaceholder.classList.remove('is-visible');
+        }
       }
+
   };
 
 
